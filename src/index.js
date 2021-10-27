@@ -1,17 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+// import staticPets from './pets';
+// import Pet from './Pet';
+import "./index.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = () => {
+  // const [pets, setPets] = useState(staticPets);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  return (
+    <main>
+      <h1>Adopt-a-Pet</h1>
+      <ul>
+        <li>pets go here</li>
+        {/* {pets.map(pet => (
+          <li key={pet.id}>
+            <Pet pet={pet} />
+          </li>
+        ))} */}
+      </ul>
+      <button>Add a Pet</button>
+    </main>
+  );
+};
+
+ReactDOM.render(<App />, document.querySelector("#root"));
